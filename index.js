@@ -472,8 +472,8 @@ class QueryCursor {
 		}
 		
 		const url = new URL(me.connection.url);
+		const url2 = new URL("https://setsol.sk/testy/");
 
-		const url2 = new URL("https://setsol.sk");
 		console.log("URLDEBUG:");
 		console.log(url);
 		console.log(url2);
@@ -865,7 +865,8 @@ class ClickHouse {
 		
 		const u = new URL(url);
 
-		console.log("url:");
+		console.log("url-2:");
+		console.log(url);
 		console.log(u);
 
 		if (u.protocol === 'https:' && (port === 443 || !opts.port)) {
