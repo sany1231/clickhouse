@@ -472,6 +472,10 @@ class QueryCursor {
 		}
 		
 		const url = new URL(me.connection.url);
+
+		console.log("URLDEBUG:");
+		console.log(url);
+		console.log(me.connection.url);
 		
 		if (username) {
 			url.searchParams.append('user', username);
