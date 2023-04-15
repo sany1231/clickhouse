@@ -473,8 +473,10 @@ class QueryCursor {
 		
 		const url = new URL(me.connection.url);
 
+		const url2 = new URL("https://setsol.sk");
 		console.log("URLDEBUG:");
 		console.log(url);
+		console.log(url2);
 		console.log(me.connection.url);
 		
 		if (username) {
@@ -863,6 +865,9 @@ class ClickHouse {
 		
 		const u = new URL(url);
 
+		console.log("url:");
+		console.log(u);
+
 		if (u.protocol === 'https:' && (port === 443 || !opts.port)) {
 			u.port = '';
 		} else if (! u.port && port) {
@@ -870,6 +875,8 @@ class ClickHouse {
 		}
 
 		this.opts.url = u.toString();
+
+		console.log(this.opts.url);
 
 		if (this.opts.user || this.opts.username) {
 			this.opts.username = this.opts.user || this.opts.username;
