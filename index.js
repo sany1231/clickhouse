@@ -1,7 +1,4 @@
 'use strict';
-
-import { URL } from 'Url';
-
 const zlib = require('zlib');
 const _ = require('lodash');
 const request = require('request');
@@ -12,6 +9,8 @@ const stream2asynciter = require('stream2asynciter');
 const tsv = require('tsv');
 const uuidv4 = require('uuid/v4');
 const INSERT_FIELDS_MASK = /^INSERT\sINTO\s(.+?)\s*\(((\n|.)+?)\)/i;
+
+var URL = require('url');
 
 
 /**
