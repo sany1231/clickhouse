@@ -1,6 +1,6 @@
 'use strict';
 
-import { URL } from 'url';
+import { URL } from 'Url';
 
 const zlib = require('zlib');
 const _ = require('lodash');
