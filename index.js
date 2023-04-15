@@ -1,5 +1,7 @@
 'use strict';
 
+import { URL } from 'url';
+
 const zlib = require('zlib');
 const _ = require('lodash');
 const request = require('request');
@@ -7,7 +9,6 @@ const { Transform, Readable, } = require('stream');
 const JSONStream = require('JSONStream');
 const through = require('through');
 const stream2asynciter = require('stream2asynciter');
-const { URL } = require('url');
 const tsv = require('tsv');
 const uuidv4 = require('uuid/v4');
 const INSERT_FIELDS_MASK = /^INSERT\sINTO\s(.+?)\s*\(((\n|.)+?)\)/i;
